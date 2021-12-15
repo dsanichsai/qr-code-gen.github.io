@@ -12,5 +12,9 @@ async function initFunc() {
       }
     });
   const result = await request.json();
-  console.log(result);
+  $('#qr').ClassyQR({
+     create: true, 
+     type: 'text',
+     text: result.billingAddressName
+  });
 };
